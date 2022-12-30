@@ -85,7 +85,6 @@ void Words(string[] args)
         for (int j = 0; j < massive_3.Length; j++)
         massive_3[j] = massive[i];
 
-        //вывод нового массива_3
         int size_2 = massive_3.Length;
         for (int j = 0; j < size_2; j++)
         Console.Write($"{massive_3[j]}, ");
