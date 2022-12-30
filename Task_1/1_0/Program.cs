@@ -14,7 +14,7 @@ void Words(string[] args)
 
       count = 0;
       massive = new string[count];
-        //ввод массива с консоли
+    //ввод массива с консоли
       do
       {
         s = Console.ReadLine();
@@ -57,38 +57,38 @@ void Words(string[] args)
 Words(args);
 
 
-// string[] MassToSize(string[] array)
-// {
-//     int count = 0;
-//     for(int i = 0; i < array.Length; i++)
-//     {
-//         if(array[i].Length < 4) count++;
-//     }
-//     string[] newArray = new string[count];
+string[] MassToSize(string[] array)
+{
+    int count = 0;
+    for(int i = 0; i < array.Length; i++)
+    {
+        if(array[i].Length < 4) count++;
+    }
+    string[] newArray = new string[count];
 
-//     int j = 0;
-//     for(int i = 0; i < array.Length; i++)
-//     {
-//         if(array[i].Length < 4)
-//         {
-//             newArray[j] = array[i];
-//             j++;
-//         }
-//     }
-//     return newArray;
-// }
+    int j = 0;
+    for(int i = 0; i < array.Length; i++)
+    {
+        if(array[i].Length < 4)
+        {
+            newArray[j] = array[i];
+            j++;
+        }
+    }
+    return newArray;
+}
 
-// void PrintMassiv(string[] array)
-// {
-//     int size = array.Length;
-//     for (int i = 0; i < size; i++)
-//     {
-//         Console.Write($"{array[i]}, ");
-//     }
-//     Console.WriteLine();
-// }
+void PrintMassiv(string[] array)
+{
+    int size = array.Length;
+    for (int i = 0; i < size; i++)
+    {
+        Console.Write($"{array[i]}, ");
+    }
+    Console.WriteLine();
+}
 
-// string[] array_a = {"451", "=)", "still", "waiting", "for"};
-// PrintMassiv(array_a);
-// string [] array_b = MassToSize(array_a);
-// PrintMassiv(array_b);
+string[] array_a = {"451", "=)", "still", "waiting", "for"};
+PrintMassiv(array_a);
+string [] array_b = MassToSize(array_a);
+PrintMassiv(array_b);
