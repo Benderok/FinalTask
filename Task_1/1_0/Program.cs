@@ -5,16 +5,16 @@
 string[] MassToSize(string[] array)
 {
     int count = 0;
-    for (int i = 0; i < array.Length; i++)
+    for(int i = 0; i < array.Length; i++)
     {
-        if (array[i].Length < 4) count++;
+        if(array[i].Length < 4) count++;
     }
     string[] newArray = new string[count];
 
     int j = 0;
-    for (int i = 0; i < array.Length; i++)
+    for(int i = 0; i < array.Length; i++)
     {
-        if (array[i].Length < 4)
+        if(array[i].Length < 4)
         {
             newArray[j] = array[i];
             j++;
@@ -33,41 +33,41 @@ void PrintMassiv(string[] array)
     Console.WriteLine();
 }
 
-string[] array_a = { "451", "=)", "still", "waiting", "for" };
+string[] array_a = {"451", "=)", "still", "waiting", "for"};
 PrintMassiv(array_a);
-string[] array_b = MassToSize(array_a);
+string [] array_b = MassToSize(array_a);
 PrintMassiv(array_b);
 
 //===========================================================
 //===========================================================
 
 void Words(string[] args)
-{
-    string[] massive;
-    int count;
-    string s;
-    string[] massive_2;
-    string[] massive_3;
-
-    Console.WriteLine("Enter any words or symbols: ");
-
-    count = 0;
-    massive = new string[count];
-
-    do
     {
+      string[] massive;
+      int count;
+      string s;
+      string[] massive_2;
+      string[] massive_3;
+
+      Console.WriteLine("Enter any words or symbols: ");
+
+      count = 0;
+      massive = new string[count];
+
+      do
+      {
         s = Console.ReadLine();
-        if (s != "")
+        if (s!="")
         {
-            count++;
-            massive_2 = new string[count];
-            for (int i = 0; i < massive_2.Length - 1; i++)
-                massive_2[i] = massive[i];
-            massive_2[count - 1] = s;
-            massive = massive_2;
+          count++;
+          massive_2 = new string[count];
+          for (int i = 0; i < massive_2.Length - 1; i++)
+            massive_2[i] = massive[i];
+          massive_2[count - 1] = s;
+          massive = massive_2;
         }
-    }
-    while (s != "");
+        }
+      while (s != "");
 
     int size = massive.Length;
     for (int i = 0; i < size; i++)
@@ -77,20 +77,20 @@ void Words(string[] args)
     Console.WriteLine();
 
     for (int i = 0; i < massive.Length; i++)
-    {
+        {
         count = 0;
         if (massive[i].Length <= 3)
-            count++;
+        count++;
         massive_3 = new string[count];
         for (int j = 0; j < massive_3.Length; j++)
-            massive_3[j] = massive[i];
+        massive_3[j] = massive[i];
 
         //вывод нового массива_3
         int size_2 = massive_3.Length;
         for (int j = 0; j < size_2; j++)
-            Console.Write($"{massive_3[j]}, ");
+        Console.Write($"{massive_3[j]}, ");
+        }
+        Console.WriteLine();
     }
-    Console.WriteLine();
-}
 
 Words(args);
