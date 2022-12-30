@@ -25,4 +25,4 @@
 
 **Блок-схема**
 
-![Diagram](//FinalTask/diagram.jpg)
+![Diagram](/diagram.jpg)
